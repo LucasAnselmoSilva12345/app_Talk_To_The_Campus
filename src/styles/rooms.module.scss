@@ -1,0 +1,76 @@
+#pageRoom {
+  header {
+    padding: 24px;
+    border-bottom: 1px solid #e2e2e2;
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      > h2 {
+        font: 700 2.25rem 'Inter', sans-serif;
+      }
+    }
+  }
+
+  main {
+    max-width: 880px;
+    margin: 0 auto;
+
+    .roomTitle {
+      margin: 32px 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h1 {
+        font: 500 24px 'Inter', sans-serif;
+        color: #29292e;
+      }
+
+      span {
+        background: #e559f9;
+        border-radius: 9999px;
+        padding: 8px 16px;
+        color: #f1f1f1;
+        font: 300 14px 'Inter', sans-serif;
+      }
+    }
+
+    form {
+      textarea {
+        width: 100%;
+        border: 0;
+        padding: 16px;
+        border-radius: 8px;
+        background: #fefefe;
+        box-shadow: 0 2px 24px rgba(0, 0, 0, 0.04);
+        resize: vertical;
+        min-height: 150px;
+      }
+
+      .formFooter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 16px;
+
+        span {
+          color: #737380;
+
+          button {
+            background: none;
+            font: 500 14px 'Inter', sans-serif;
+            border: 0;
+            color: #835afd;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

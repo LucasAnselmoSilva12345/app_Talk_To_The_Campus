@@ -1,6 +1,9 @@
 // import { useAuth } from '../../hooks/useAuth';
+import { FormEvent, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 
-import { Link } from 'react-router-dom';
+import { database } from '../../services/firebase';
+import { useAuth } from '../../hooks/useAuth';
 
 import { Button } from '../../components/Button';
 import { VscSignIn } from 'react-icons/vsc';
@@ -9,7 +12,26 @@ import illustrationImg from '../../assets/images/illustration.svg';
 import styles from '../Home/style.module.scss';
 
 export function NewRoom() {
-  // const { user } = useAuth();
+  const { user } = useAuth();
+  const history = useHistory();
+  const [newRoom, setNewRoom] = useState('');
+
+  async function handleCreateRoom(event: FormEvent) {
+    event.preventDefault();
+
+    if (newRoom.trim() === '') {
+      alert('Por favor, digite um nome para sua sala');
+    }
+
+    const roomRef = database.ref('rooms');
+
+    const firebaseRoom = await roomRef.push({
+      title: newRoom,
+      authorId: user?.id,
+    });
+
+    history.push(`/rooms/${firebaseRoom.key}`);
+  }
 
   return (
     <div id={styles.pageAuth}>
@@ -22,8 +44,13 @@ export function NewRoom() {
         <div className={styles.mainContent}>
           <h2>Talk To The Campus</h2>
           <h4>Crie uma nova sala</h4>
-          <form>
-            <input type="text" placeholder="Digite o none da sala" />
+          <form onSubmit={handleCreateRoom}>
+            <input
+              type="text"
+              placeholder="Digite o none da sala"
+              onChange={(event) => setNewRoom(event.target.value)}
+              value={newRoom}
+            />
             <Button type="submit">
               Criar sala <VscSignIn />
             </Button>
