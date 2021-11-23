@@ -1,5 +1,5 @@
-function App() {
-  return <h1>Olá</h1>;
-}
+import { Routes } from './Routes';
 
-export default App;
+export function App() {
+  return <Routes />;
+}
