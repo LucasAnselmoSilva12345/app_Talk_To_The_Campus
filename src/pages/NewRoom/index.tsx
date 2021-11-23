@@ -1,3 +1,5 @@
+// import { useAuth } from '../../hooks/useAuth';
+
 import { Link } from 'react-router-dom';
 
 import { Button } from '../../components/Button';
@@ -7,6 +9,8 @@ import illustrationImg from '../../assets/images/illustration.svg';
 import styles from '../Home/style.module.scss';
 
 export function NewRoom() {
+  // const { user } = useAuth();
+
   return (
     <div id={styles.pageAuth}>
       <aside>
