@@ -6,6 +6,7 @@ import { useAuth } from '../../hooks/useAuth';
 
 import { Button } from '../../components/Button';
 import { RoomCode } from '../../components/RoomCode';
+import { Question } from '../../components/Question';
 
 import { AiOutlineSend } from 'react-icons/ai';
 
@@ -139,7 +140,18 @@ export function Room() {
             </Button>
           </div>
         </form>
-        {JSON.stringify(questions)}
+
+        <div className={styles.questionList}>
+          {questions.map((question) => {
+            return (
+              <Question
+                key={question.id}
+                content={question.content}
+                author={question.author}
+              />
+            );
+          })}
+        </div>
       </main>
     </div>
   );
