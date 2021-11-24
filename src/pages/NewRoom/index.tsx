@@ -6,10 +6,12 @@ import { database } from '../../services/firebase';
 import { useAuth } from '../../hooks/useAuth';
 
 import { Button } from '../../components/Button';
+
 import { VscSignIn } from 'react-icons/vsc';
 
 import illustrationImg from '../../assets/images/illustration.svg';
-import styles from '../Home/style.module.scss';
+
+import styles from '../../styles/home_newRoom.module.scss';
 
 export function NewRoom() {
   const { user } = useAuth();
@@ -47,7 +49,7 @@ export function NewRoom() {
           <form onSubmit={handleCreateRoom}>
             <input
               type="text"
-              placeholder="Digite o none da sala"
+              placeholder="Digite o nome da sala"
               onChange={(event) => setNewRoom(event.target.value)}
               value={newRoom}
             />

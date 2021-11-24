@@ -1,0 +1,23 @@
+:root {
+  --PurpleRainDark: #25064c;
+  --PurpleRainBold: #36175e;
+  --PurpleRainMedium: #553285;
+  --PurpleRainNormal: #6e1fff;
+  --PurpleRainLight: #7b52ab;
+
+  --WhiteGrayRainDark: #737380;
+  --WhiteGrayRainBold: #a8a8b3;
+  --WhiteGrayRainMedium: #f8f8f8;
+  --WhiteGrayRainNormal: #f1f1f1;
+  --WhiteGrayRainLight: #fff;
+
+  /* Color Theme Swatches in Hex */
+  --DarkNegativeDark: #3e4047;
+  --DarkNegativeBold: #2b2d31;
+  --DarkNegativeMedium: #18191b;
+  --DarkNegativeNormal: #555962;
+  --DarkNegativeLight: #474a52;
+
+  --ColorGoogle: #ea4335;
+  --ColorLink: #e559f9;
+}

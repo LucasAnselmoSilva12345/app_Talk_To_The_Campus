@@ -1,0 +1,147 @@
+#pageAuth {
+  display: flex;
+  align-items: stretch;
+  height: 100vh;
+
+  aside {
+    flex: 7;
+
+    background: var(--PurpleRainNormal);
+    color: var(--WhiteGrayRainLight);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 7.5rem 5rem;
+
+    img {
+      max-width: 20rem;
+    }
+
+    strong {
+      font: 700 2.25rem 'Inter', sans-serif;
+      line-height: 2.625rem;
+      margin-top: 1rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin-top: 1rem;
+      color: var(--WhiteGrayRainMedium);
+    }
+  }
+
+  main {
+    flex: 8;
+
+    padding: 0 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 20rem;
+    align-items: stretch;
+    text-align: center;
+
+    > h2 {
+      align-self: center;
+      font: 700 3rem 'Inter', sans-serif;
+      color: var(--PurpleRainDark);
+    }
+
+    h4 {
+      margin: 2rem 0;
+      align-self: center;
+      font: 500 1.375rem 'Inter', sans-serif;
+      color: var(--WhiteGrayRainBold);
+    }
+
+    button {
+      margin-top: 1rem;
+    }
+
+    button,
+    input {
+      width: 100%;
+    }
+
+    form {
+      input {
+        height: 3.125rem;
+        border-radius: 0.5rem;
+        padding: 0 1rem;
+        background-color: var(--WhiteGrayRainLight);
+        border: 0.0625rem solid var(--WhiteGrayRainBold);
+      }
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: var(--WhiteGrayRainDark);
+      margin-top: 1rem;
+
+      a {
+        color: var(--ColorLink);
+      }
+    }
+  }
+
+  .createRoom {
+    margin-top: 4rem;
+    height: 3.125rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    background: var(--ColorGoogle);
+    color: var(--WhiteGrayRainLight);
+    padding: 0 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    border: 0;
+
+    transition: filter 0.3s;
+
+    svg {
+      margin-right: 0.5rem;
+    }
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+
+  .separator {
+    font-size: 0.875rem;
+    color: var(--WhiteGrayRainBold);
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      flex: 1;
+      height: 0.0625rem;
+      background: var(--WhiteGrayRainBold);
+      margin-right: 1rem;
+    }
+
+    &::after {
+      content: '';
+      flex: 1;
+      height: 0.0625rem;
+      background-color: var(--WhiteGrayRainBold);
+      margin-left: 1rem;
+    }
+  }
+}

@@ -1,6 +1,8 @@
 import { FormEvent, useState } from 'react';
-import { useAuth } from '../../hooks/useAuth';
 import { useHistory } from 'react-router-dom';
+
+import { database } from '../../services/firebase';
+import { useAuth } from '../../hooks/useAuth';
 
 import { Button } from '../../components/Button';
 
@@ -8,8 +10,8 @@ import { FaGoogle } from 'react-icons/fa';
 import { VscSignIn } from 'react-icons/vsc';
 
 import illustrationImg from '../../assets/images/illustration.svg';
-import styles from './style.module.scss';
-import { database } from '../../services/firebase';
+
+import styles from '../../styles/home_newRoom.module.scss';
 
 export function Home() {
   const history = useHistory();
@@ -59,7 +61,7 @@ export function Home() {
           <form onSubmit={handleJoinRoom}>
             <input
               type="text"
-              placeholder="Digite o codigo da sala"
+              placeholder="Digite o código da sala"
               onChange={(event) => setRoomCode(event.target.value)}
               value={roomCode}
             />

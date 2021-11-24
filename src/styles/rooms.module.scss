@@ -1,10 +1,10 @@
 #pageRoom {
   header {
-    padding: 24px;
-    border-bottom: 1px solid #e2e2e2;
+    padding: 1.5rem;
+    border-bottom: 0.0625rem solid var(--PurpleRainLight);
 
     .content {
-      max-width: 1200px;
+      max-width: 75rem;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -12,31 +12,32 @@
 
       > h2 {
         font: 700 2.25rem 'Inter', sans-serif;
+        color: var(--PurpleRainDark);
       }
     }
   }
 
   main {
-    max-width: 880px;
+    max-width: 55rem;
     margin: 0 auto;
 
     .roomTitle {
-      margin: 32px 0 24px;
+      margin: 2rem 0 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
 
       h1 {
-        font: 500 24px 'Inter', sans-serif;
-        color: #29292e;
+        font: 500 1.5rem 'Inter', sans-serif;
+        color: var(--PurpleRainMedium);
       }
 
       span {
-        background: #e559f9;
-        border-radius: 9999px;
-        padding: 8px 16px;
-        color: #f1f1f1;
-        font: 300 14px 'Inter', sans-serif;
+        background: var(--ColorLink);
+        border-radius: 624.9375rem;
+        padding: 0.5rem 1rem;
+        color: var(--WhiteGrayRainLight);
+        font: 300 0.875rem 'Inter', sans-serif;
       }
     }
 
@@ -44,45 +45,44 @@
       textarea {
         width: 100%;
         border: 0;
-        padding: 16px;
-        border-radius: 8px;
-        background: #fefefe;
-        box-shadow: 0 2px 24px rgba(0, 0, 0, 0.04);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.125rem 1.5rem rgba(0, 0, 0, 0.04);
         resize: vertical;
-        min-height: 150px;
+        min-height: 9.375rem;
       }
 
       .formFooter {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 16px;
+        margin-top: 1rem;
 
         .userInfo {
           display: flex;
           align-items: center;
 
           img {
-            width: 32px;
-            height: 32px;
+            width: 2rem;
+            height: 2rem;
             border-radius: 50%;
           }
 
           span {
-            margin-left: 8px;
-            color: #29292e;
-            font: 500 14px 'Inter', sans-serif;
+            margin-left: 0.5rem;
+            color: var(--DarkNegativeDark);
+            font: 500 0.875rem 'Inter', sans-serif;
           }
         }
 
         > span {
-          color: #737380;
+          color: var(--WhiteGrayRainDark);
 
           button {
             background: none;
-            font: 500 14px 'Inter', sans-serif;
+            font: 500 0.875rem 'Inter', sans-serif;
             border: 0;
-            color: #835afd;
+            color: var(--PurpleRainMedium);
             text-decoration: underline;
             cursor: pointer;
           }

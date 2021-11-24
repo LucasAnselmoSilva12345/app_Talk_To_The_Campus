@@ -1,10 +1,10 @@
 .button {
-  height: 50px;
-  border-radius: 8px;
+  height: 3.125rem;
+  border-radius: 0.5rem;
   font-weight: 500;
-  background: #835afd;
-  color: #fff;
-  padding: 0 32px;
+  background: var(--PurpleRainNormal);
+  color: var(--WhiteGrayRainLight);
+  padding: 0 2rem;
 
   display: flex;
   align-items: center;
@@ -16,7 +16,7 @@
   transition: filter 0.3s;
 
   svg {
-    margin-left: 8px;
+    margin-left: 0.5rem;
   }
 
   &:not(:disabled):hover {

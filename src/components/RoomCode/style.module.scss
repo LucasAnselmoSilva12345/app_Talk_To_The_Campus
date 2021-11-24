@@ -1,24 +1,24 @@
 .roomCode {
-  height: 40px;
-  border-radius: 8px;
+  height: 2.5rem;
+  border-radius: 0.5rem;
   overflow: hidden;
 
-  background: #fff;
-  border: 1px solid #835afd;
+  background: var(--WhiteGrayRainLight);
+  border: 0.0625rem solid var(--PurpleRainNormal);
   cursor: pointer;
 
   display: flex;
 
   > div {
-    background: #835afd;
-    height: 40px;
-    padding: 0 12px;
+    background: var(--PurpleRainNormal);
+    height: 2.5rem;
+    padding: 0 0.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
 
     svg {
-      color: #fff;
+      color: var(--WhiteGrayRainLight);
     }
   }
 
@@ -26,8 +26,8 @@
     display: flex;
     align-self: center;
     flex: 1;
-    padding: 0 16px 0 12px;
-    width: 240px;
-    font: 500 14px 'Inter', sans-serif;
+    padding: 0 1rem 0 0.75rem;
+    width: 15rem;
+    font: 500 0.875rem 'Inter', sans-serif;
   }
 }
