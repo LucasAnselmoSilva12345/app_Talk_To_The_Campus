@@ -1,10 +1,8 @@
-import { FormEvent, useState } from 'react';
+// import { FormEvent, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { useAuth } from '../../hooks/useAuth';
+// import { useAuth } from '../../hooks/useAuth';
 import { UseRoom } from '../../hooks/useRoom';
-
-import { database } from '../../services/firebase';
 
 import { Button } from '../../components/Button';
 import { RoomCode } from '../../components/RoomCode';
@@ -17,41 +15,11 @@ type RoomParams = {
 };
 
 export function Admin() {
-  const { user } = useAuth();
+  // const { user } = useAuth();
   const params = useParams<RoomParams>();
-  const [newQuestion, setNewQuestion] = useState('');
   const roomId = params.id;
 
   const { questions, title } = UseRoom(roomId);
-
-  async function handleSendQuestion(event: FormEvent) {
-    event.preventDefault();
-
-    if (newQuestion.trim() === '') {
-      return;
-    }
-
-    if (!user) {
-      throw new Error(
-        'Você precisa estar logado na aplicação, para enviar suas dúvidas.'
-      );
-    }
-
-    const question = {
-      content: newQuestion,
-      author: {
-        name: user.name,
-        avatar: user.avatar,
-      },
-      isHighlighted: false,
-      isAnswered: false,
-    };
-
-    await database.ref(`rooms/${roomId}/questions`).push(question);
-
-    setNewQuestion('');
-  }
-
   return (
     <div id={styles.pageRoom}>
       <header>
