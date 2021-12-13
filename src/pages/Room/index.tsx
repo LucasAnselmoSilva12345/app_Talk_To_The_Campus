@@ -12,7 +12,9 @@ import { Question } from '../../components/Question';
 
 import { AiOutlineSend } from 'react-icons/ai';
 
-import styles from '../../styles/rooms.module.scss';
+import logoImg from '../../assets/images/logo.svg';
+
+import '../../styles/rooms.scss';
 
 type RoomParams = {
   id: string;
@@ -70,17 +72,17 @@ export function Room() {
   }
 
   return (
-    <div id={styles.pageRoom}>
+    <div id="pageRoom">
       <header>
-        <div className={styles.content}>
-          <h2>Talk To The Campus</h2>
+        <div className="content">
+          <img src={logoImg} alt="Talk to the campus" />
           <RoomCode code={roomId} />
         </div>
       </header>
 
       <main>
-        <div className={styles.roomTitle}>
-          <h1>Sala de {title}</h1>
+        <div className="roomTitle">
+          <h1>{title}</h1>
           {questions.length > 0 && <span>{questions.length} dúvida(s)</span>}
         </div>
 
@@ -91,9 +93,9 @@ export function Room() {
             value={newQuestion}
           />
 
-          <div className={styles.formFooter}>
+          <div className="formFooter">
             {user ? (
-              <div className={styles.userInfo}>
+              <div className="userInfo">
                 <img src={user.avatar} alt={user.name} />
                 <span>{user.name}</span>
               </div>
@@ -108,7 +110,7 @@ export function Room() {
           </div>
         </form>
 
-        <div className={styles.questionList}>
+        <div className="questionList">
           {questions.map((question) => {
             return (
               <Question
@@ -120,7 +122,7 @@ export function Room() {
               >
                 {!question.isAnswered && (
                   <button
-                    className={styles.likeButton}
+                    className="likeButton"
                     type="button"
                     aria-label="Marcar com gostei"
                     onClick={() =>

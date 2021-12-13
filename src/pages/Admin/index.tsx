@@ -11,8 +11,9 @@ import { Question } from '../../components/Question';
 import deleteImg from '../../assets/images/delete.svg';
 import checkImg from '../../assets/images/check.svg';
 import answerImg from '../../assets/images/answer.svg';
+import logoImg from '../../assets/images/logo.svg';
 
-import styles from '../../styles/rooms.module.scss';
+import '../../styles/rooms.scss';
 import { database } from '../../services/firebase';
 
 type RoomParams = {
@@ -56,22 +57,22 @@ export function Admin() {
   }
 
   return (
-    <div id={styles.pageRoom}>
+    <div id="pageRoom">
       <header>
-        <div className={styles.content}>
+        <div className="content">
           <Button onClick={handleEndRoom}>Encerrar sala</Button>
-          <h2>Talk To The Campus</h2>
+          <img src={logoImg} alt="Talk to the campus" />
           <RoomCode code={roomId} />
         </div>
       </header>
 
       <main>
-        <div className={styles.roomTitle}>
-          <h1>Sala de {title}</h1>
+        <div className="roomTitle">
+          <h1>{title}</h1>
           {questions.length > 0 && <span>{questions.length} dúvida(s)</span>}
         </div>
 
-        <div className={styles.questionList}>
+        <div className="questionList">
           {questions.map((question) => {
             return (
               <Question

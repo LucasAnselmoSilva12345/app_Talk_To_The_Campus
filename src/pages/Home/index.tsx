@@ -10,8 +10,9 @@ import { FaGoogle } from 'react-icons/fa';
 import { VscSignIn } from 'react-icons/vsc';
 
 import illustrationImg from '../../assets/images/illustration.svg';
+import logoImg from '../../assets/images/logo.svg';
 
-import styles from '../../styles/home_newRoom.module.scss';
+import '../../styles/home_newRoom.scss';
 
 export function Home() {
   const history = useHistory();
@@ -49,20 +50,20 @@ export function Home() {
   }
 
   return (
-    <div id={styles.pageAuth}>
+    <div id="pageAuth">
       <aside>
         <img src={illustrationImg} alt="Ilustração de uma conversa via chat" />
         <strong>Toda pergunta precisa de uma resposta</strong>
         <p>Tire as dúvidas de seus espectadores ao vivo</p>
       </aside>
       <main>
-        <div className={styles.mainContent}>
-          <h2>Talk To The Campus</h2>
-          <button onClick={handleCreateRoom} className={styles.createRoom}>
+        <div className="mainContent">
+          <img src={logoImg} alt="Talk to the campus" />
+          <button onClick={handleCreateRoom} className="createRoom">
             <FaGoogle />
             Crie sua sala com o Google
           </button>
-          <div className={styles.separator}>ou entre em uma sala</div>
+          <div className="separator">ou entre em uma sala</div>
           <form onSubmit={handleJoinRoom}>
             <input
               type="text"

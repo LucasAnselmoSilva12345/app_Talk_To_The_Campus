@@ -1,5 +1,5 @@
 import { MdContentCopy } from 'react-icons/md';
-import styles from './style.module.scss';
+import './style.scss';
 
 type RoomCodeProps = {
   code: string;
@@ -11,7 +11,7 @@ export function RoomCode(props: RoomCodeProps) {
   }
 
   return (
-    <button className={styles.roomCode} onClick={copyRoomCodeToClipboard}>
+    <button className="roomCode" onClick={copyRoomCodeToClipboard}>
       <div>
         <MdContentCopy />
       </div>

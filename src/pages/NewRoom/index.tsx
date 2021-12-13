@@ -11,7 +11,7 @@ import { VscSignIn } from 'react-icons/vsc';
 
 import illustrationImg from '../../assets/images/illustration.svg';
 
-import styles from '../../styles/home_newRoom.module.scss';
+import '../../styles/home_newRoom.scss';
 
 export function NewRoom() {
   const { user } = useAuth();
@@ -36,14 +36,14 @@ export function NewRoom() {
   }
 
   return (
-    <div id={styles.pageAuth}>
+    <div id="pageAuth">
       <aside>
         <img src={illustrationImg} alt="Ilustração de uma conversa via chat" />
         <strong>Toda pergunta precisa de uma resposta</strong>
         <p>Tire as dúvidas de seus espectadores ao vivo</p>
       </aside>
       <main>
-        <div className={styles.mainContent}>
+        <div className="mainContent">
           <h2>Talk To The Campus</h2>
           <h4>Crie uma nova sala</h4>
           <form onSubmit={handleCreateRoom}>
