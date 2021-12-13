@@ -1,7 +1,5 @@
-// import { FormEvent, useState } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useHistory, Link } from 'react-router-dom';
 
-// import { useAuth } from '../../hooks/useAuth';
 import { UseRoom } from '../../hooks/useRoom';
 
 import { Button } from '../../components/Button';
@@ -21,7 +19,6 @@ type RoomParams = {
 };
 
 export function Admin() {
-  // const { user } = useAuth();
   const history = useHistory();
   const params = useParams<RoomParams>();
   const roomId = params.id;
@@ -61,7 +58,9 @@ export function Admin() {
       <header>
         <div className="content">
           <Button onClick={handleEndRoom}>Encerrar sala</Button>
-          <img src={logoImg} alt="Talk to the campus" />
+          <Link to="/">
+            <img src={logoImg} alt="Talk to the campus" />
+          </Link>
           <RoomCode code={roomId} />
         </div>
       </header>

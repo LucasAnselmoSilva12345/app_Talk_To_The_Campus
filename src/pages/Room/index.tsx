@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import { useAuth } from '../../hooks/useAuth';
 import { UseRoom } from '../../hooks/useRoom';
@@ -75,7 +75,9 @@ export function Room() {
     <div id="pageRoom">
       <header>
         <div className="content">
-          <img src={logoImg} alt="Talk to the campus" />
+          <Link to="/">
+            <img src={logoImg} alt="Talk to the campus" />
+          </Link>
           <RoomCode code={roomId} />
         </div>
       </header>
@@ -110,6 +112,9 @@ export function Room() {
           </div>
         </form>
 
+        <div className="questionsAsked">
+          <h3>Perguntas já realizadas</h3>
+        </div>
         <div className="questionList">
           {questions.map((question) => {
             return (

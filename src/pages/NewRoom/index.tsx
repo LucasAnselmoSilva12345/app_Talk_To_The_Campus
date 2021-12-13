@@ -10,6 +10,7 @@ import { Button } from '../../components/Button';
 import { VscSignIn } from 'react-icons/vsc';
 
 import illustrationImg from '../../assets/images/illustration.svg';
+import logoImg from '../../assets/images/logo.svg';
 
 import '../../styles/home_newRoom.scss';
 
@@ -44,12 +45,12 @@ export function NewRoom() {
       </aside>
       <main>
         <div className="mainContent">
-          <h2>Talk To The Campus</h2>
+          <img src={logoImg} alt="Talk to the Campus" />
           <h4>Crie uma nova sala</h4>
           <form onSubmit={handleCreateRoom}>
             <input
               type="text"
-              placeholder="Digite o nome da sala"
+              placeholder="Digite o título da sala"
               onChange={(event) => setNewRoom(event.target.value)}
               value={newRoom}
             />

@@ -26,7 +26,9 @@ export function Question({
         isHighlighted ? 'highlighted' : ''
       }`}
     >
-      <p>{content}</p>
+      <div className="content">
+        <p>{content}</p>
+      </div>
       <footer>
         <div className="userInfo">
           <img src={author.avatar} alt={author.name} />
