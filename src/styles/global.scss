@@ -23,3 +23,15 @@ a {
 li {
   list-style: none;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--WhiteGrayRainMedium);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d0bfff;
+}

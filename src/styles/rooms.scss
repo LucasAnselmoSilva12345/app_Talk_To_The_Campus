@@ -133,4 +133,77 @@
       grid-gap: 0.5rem;
     }
   }
+
+  @media screen and (max-width: 890px) {
+    main {
+      .roomTitle {
+        margin: 2rem 0;
+        flex-direction: column;
+        h1 {
+          margin-bottom: 1rem;
+        }
+      }
+
+      form {
+        text-align: center;
+
+        textarea {
+          width: 95%;
+          text-align: center;
+          padding: 1rem;
+        }
+
+        .formFooter {
+          flex-direction: column-reverse;
+          justify-content: center;
+          gap: 1rem;
+        }
+      }
+
+      .questionList {
+        grid-template-columns: 1fr;
+        grid-gap: 0.5rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    header {
+      .content {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.25rem;
+
+        .buttonHandleEndRoom {
+          height: 3.125rem;
+          border-radius: 0.5rem;
+          font-weight: 500;
+          background: var(--PurpleRainMedium);
+          color: var(--WhiteGrayRainLight);
+          padding: 0 2rem;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          cursor: pointer;
+          border: 0;
+
+          transition: filter 0.3s;
+
+          svg {
+            margin-left: 0.5rem;
+          }
+
+          &:not(:disabled):hover {
+            filter: brightness(0.5);
+          }
+        }
+
+        a img {
+          width: 15.625rem;
+        }
+      }
+    }
+  }
 }
