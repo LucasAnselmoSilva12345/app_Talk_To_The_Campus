@@ -5,14 +5,16 @@ import { UseRoom } from '../../hooks/useRoom';
 import { RoomCode } from '../../components/RoomCode';
 import { Question } from '../../components/Question';
 
-import deleteImg from '../../assets/images/delete.svg';
-import checkImg from '../../assets/images/check.svg';
-import answerImg from '../../assets/images/answer.svg';
 import logoImg from '../../assets/images/logoRooms.svg';
 
 import '../../styles/rooms.scss';
 import { database } from '../../services/firebase';
 import { VscSignOut } from 'react-icons/vsc';
+import {
+  AiOutlineCheckCircle,
+  AiOutlineComment,
+  AiOutlineDelete,
+} from 'react-icons/ai';
 
 type RoomParams = {
   id: string;
@@ -89,19 +91,13 @@ export function Admin() {
                       type="button"
                       onClick={() => handleCheckQuestionAsAnswered(question.id)}
                     >
-                      <img
-                        src={checkImg}
-                        alt="Marcar pergunta como respondida"
-                      />
+                      <AiOutlineCheckCircle />
                     </button>
                     <button
                       type="button"
                       onClick={() => handleHighlightQuestion(question.id)}
                     >
-                      <img
-                        src={answerImg}
-                        alt="Destacar pergunta que está respondendo"
-                      />
+                      <AiOutlineComment />
                     </button>
                   </>
                 )}
@@ -109,7 +105,7 @@ export function Admin() {
                   type="button"
                   onClick={() => handleDeleteQuestion(question.id)}
                 >
-                  <img src={deleteImg} alt="Deletar pergunta" />
+                  <AiOutlineDelete />
                 </button>
               </Question>
             );
