@@ -4,13 +4,13 @@
   overflow: hidden;
 
   background: var(--WhiteGrayRainLight);
-  border: 0.0625rem solid var(--PurpleRainNormal);
+  border: 0.0625rem solid var(--PurpleRainDark);
   cursor: pointer;
 
   display: flex;
 
   > div {
-    background: var(--PurpleRainNormal);
+    background: var(--PurpleRainDark);
     height: 2.5rem;
     padding: 0 0.75rem;
     display: flex;

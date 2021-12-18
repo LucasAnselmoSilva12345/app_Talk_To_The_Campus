@@ -10,9 +10,10 @@ import { Button } from '../../components/Button';
 import { RoomCode } from '../../components/RoomCode';
 import { Question } from '../../components/Question';
 
+import { FcLike } from 'react-icons/fc';
 import { AiOutlineSend } from 'react-icons/ai';
 
-import logoImg from '../../assets/images/logo.svg';
+import logoImg from '../../assets/images/logoRooms.svg';
 
 import '../../styles/rooms.scss';
 
@@ -137,7 +138,8 @@ export function Room() {
                     {question.likeCount > 0 && (
                       <span>{question.likeCount}</span>
                     )}
-                    <svg
+                    <FcLike />
+                    {/* <svg
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
@@ -151,7 +153,7 @@ export function Room() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       />
-                    </svg>
+                    </svg> */}
                   </button>
                 )}
               </Question>

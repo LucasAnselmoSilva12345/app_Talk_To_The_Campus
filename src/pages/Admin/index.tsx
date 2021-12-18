@@ -2,17 +2,17 @@ import { useParams, useHistory, Link } from 'react-router-dom';
 
 import { UseRoom } from '../../hooks/useRoom';
 
-import { Button } from '../../components/Button';
 import { RoomCode } from '../../components/RoomCode';
 import { Question } from '../../components/Question';
 
 import deleteImg from '../../assets/images/delete.svg';
 import checkImg from '../../assets/images/check.svg';
 import answerImg from '../../assets/images/answer.svg';
-import logoImg from '../../assets/images/logo.svg';
+import logoImg from '../../assets/images/logoRooms.svg';
 
 import '../../styles/rooms.scss';
 import { database } from '../../services/firebase';
+import { VscSignOut } from 'react-icons/vsc';
 
 type RoomParams = {
   id: string;
@@ -57,7 +57,9 @@ export function Admin() {
     <div id="pageRoom">
       <header>
         <div className="content">
-          <Button onClick={handleEndRoom}>Encerrar sala</Button>
+          <button className="buttonHandleEndRoom" onClick={handleEndRoom}>
+            Encerrar sala <VscSignOut />
+          </button>
           <Link to="/">
             <img src={logoImg} alt="Talk to the campus" />
           </Link>

@@ -10,7 +10,7 @@ import { FaGoogle } from 'react-icons/fa';
 import { VscSignIn } from 'react-icons/vsc';
 
 import illustrationImg from '../../assets/images/illustration.svg';
-import logoImg from '../../assets/images/logo.svg';
+import logoImg from '../../assets/images/logoImg.svg';
 
 import '../../styles/home_newRoom.scss';
 
